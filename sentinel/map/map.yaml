@@ -1,0 +1,12 @@
+# image: /home/ubuntu/ws_livox/src/shaoBing/map/map.pgm
+image: map.pgm
+resolution: 0.011177
+origin: [-5.8343, -7.8239, 0.0] # 图像左下角像素相对于设定的坐标系的姿态 
+negate: 0
+occupied_thresh: 0.65
+free_thresh: 0.196
+mode: 'scale'
+# 添加下面的部分来设置机器人的起始位置
+#origin_x: 0.0
+#origin_y: 0.0
+#origin_yaw: 1.57

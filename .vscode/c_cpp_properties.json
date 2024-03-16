@@ -1,0 +1,23 @@
+{
+  "configurations": [
+    {
+      "browse": {
+        "databaseFilename": "${default}",
+        "limitSymbolsToIncludedHeaders": false
+      },
+      "includePath": [
+        "/home/ubuntu/Documents/SentryRobot_Navigation/devel/include/**",
+        "/opt/ros/noetic/include/**",
+        "/home/ubuntu/Documents/SentryRobot_Navigation/src/FAST_LIO/include/**",
+        "/home/ubuntu/Documents/SentryRobot_Navigation/src/sentinel/include/**",
+        "/usr/include/**"
+      ],
+      "name": "ROS",
+      "intelliSenseMode": "gcc-x64",
+      "compilerPath": "/usr/bin/gcc",
+      "cStandard": "gnu11",
+      "cppStandard": "c++14"
+    }
+  ],
+  "version": 4
+}

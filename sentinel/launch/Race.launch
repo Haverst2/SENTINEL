@@ -1,0 +1,19 @@
+<launch>
+    <param name="publishDistanceMap" type="bool" value="1"/>
+    <param name="publishVoronoiMap" type="bool" value="1"/>
+    <arg name="rviz" default="true"/>
+
+    <node name="map_server" pkg="map_server" type="map_server" output="screen" args="$(find sentinel)/map/test.yaml" respawn = "true">
+        <remap from="map" to="map_static"/>
+    </node>
+
+    <node pkg="sentinel" type="voronoiPlanner" name="voronoiPlanner" output="screen" >
+        <rosparam file="$(find sentinel)/param/DistanceManager.yaml" command="load"  respawn = "true"/>
+    </node>
+
+    <node pkg="sentinel" type="sentinel" name="sentinel" output="screen" respawn = "true"/>
+
+    <group if="$(arg rviz)">
+        <node launch-prefix="nice" pkg="rviz" type="rviz" name="rviz" args="-d $(find sentinel)/rviz/path_test.rviz" />
+    </group>  
+</launch>
